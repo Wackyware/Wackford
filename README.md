@@ -30,4 +30,8 @@ The worlds **best** bot framework for 🦖**Deno** powered by **[Discordeno](htt
 **A**: That's like asking The Lacs to make good music.
 
 **Q**: Can I get support?
-**A**: Only if you listen to money machine by 100 gecs for 100 years.
+**A**: Only if you listen to money machine by 100 gecs for 100 years.  
+  
+  
+  
+Wally Wackford is trademark of Spindlehorse Toons (probably), and we do not claim ownership in any way, shape, or form.
