@@ -17,19 +17,19 @@ The worlds **best** bot framework for 🦖**Deno** powered by **[Discordeno](htt
 
 ## FAQ
 
-**Q**: Why?
+**Q**: Why?  
 **A**: Why not?
 
-**Q**: Why is this README so bad?
+**Q**: Why is this README so bad?  
 **A**: See the answer for the first question.
 
-**Q**: Should I use ths in production?
+**Q**: Should I use ths in production?  
 **A**: Probably not (but who are we to stop you!).
 
-**Q**: Do you have documentation?
+**Q**: Do you have documentation?  
 **A**: That's like asking The Lacs to make good music.
 
-**Q**: Can I get support?
+**Q**: Can I get support?  
 **A**: Only if you listen to money machine by 100 gecs for 100 years.  
   
   
