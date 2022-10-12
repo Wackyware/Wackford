@@ -1,0 +1,5 @@
+# old habits die hard
+node_modules
+
+# don't wanna use up too much LFS space
+angel_dust_asmr
