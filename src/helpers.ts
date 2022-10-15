@@ -5,6 +5,10 @@ export async function getBotUser(bot: Bot) {
     return await bot.helpers.getUser(bot.id);
 }
 
+export function snowflakeToTimestamp(id: bigint) {
+    return Number(id / 4194304n + 1420070400000n);
+}
+
 interface Options extends InteractionResponse {
     data: InteractionResponse["data"] & {
         private?: boolean;
