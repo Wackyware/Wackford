@@ -20,6 +20,7 @@ export interface TextCommandOptions {
     };
 }
 
+//TODO: guild slash commands
 export interface SlashCommandOptions {
     name: string;
     description?: string;
