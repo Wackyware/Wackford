@@ -5,16 +5,25 @@ import { VERSION } from "../mod.ts";
 
 let bot: Bot;
 
+type Plugin = (bot: Bot) => Bot;
+
 const BotEmitter = new EventEmitter<{
-    start(bot: CreateBotOptions): void;
+    start(bot: CreateBotOptions, plugins?: Plugin[]): void;
     ready(bot: Bot): void;
     message: typeof bot.events.messageCreate;
     interactionCreate: typeof bot.events.interactionCreate;
 }>();
 
 // listen for startup event
-BotEmitter.on("start", async (opts: CreateBotOptions) => {
+BotEmitter.on("start", async (opts: CreateBotOptions, plugins?: Plugin[]) => {
     bot = createBot(opts);
+
+    //TODO: allow for plugin options without `(bot) => whateverPlugin(bot, opts)` jank
+    if (plugins) {
+        plugins.forEach((plug) => {
+            bot = plug(bot);
+        });
+    }
 
     // setup emitters
     bot.events.ready = (bot) => {
