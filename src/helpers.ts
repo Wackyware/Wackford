@@ -1,4 +1,11 @@
-import { Interaction, InteractionResponse, InteractionResponseTypes } from "../discordeno.ts";
+import {
+    CreateMessage,
+    Interaction,
+    InteractionResponse,
+    InteractionResponseTypes,
+    Message,
+    sendMessage,
+} from "../discordeno.ts";
 import { Bot } from "https://deno.land/x/discordeno@17.0.0/bot.ts";
 
 export async function getBotUser(bot: Bot) {
@@ -26,4 +33,19 @@ export async function sendInteractionResponse(bot: Bot, interaction: Interaction
             data,
         },
     );
+}
+
+export async function replyToMessage(bot: Bot, message: Message, opts: CreateMessage) {
+    if (opts.messageReference) {
+        return await sendMessage(bot, message.channelId, opts);
+    }
+    await sendMessage(bot, message.channelId, {
+        ...opts,
+        messageReference: {
+            channelId: message.channelId,
+            guildId: message.guildId,
+            messageId: message.id,
+            failIfNotExists: false,
+        },
+    });
 }
