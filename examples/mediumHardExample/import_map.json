@@ -1,0 +1,5 @@
+{
+    "imports": {
+        "@wackford/": "https://deno.land/x/wackford@v0.0.3/"
+    }
+}
