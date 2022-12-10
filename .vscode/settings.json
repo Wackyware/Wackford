@@ -1,6 +1,9 @@
 {
     "deno.enable": true,
     "deno.unstable": true,
-    "editor.tabSize": 4,
-    "editor.detectIndentation": false
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    }
 }
