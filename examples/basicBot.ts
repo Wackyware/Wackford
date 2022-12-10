@@ -11,17 +11,6 @@ wackford.createSlashCommand({
     },
 });
 
-wackford.createTextCommand({
-    name: "hello",
-    description: "hey all scott here",
-    options: {
-        prefix: "!",
-    },
-    execute: (bot, message) => {
-        return "Hello, world!";
-    },
-});
-
 wackford.initCommands();
 
 await wackford.BotEmitter.emit("start", {
