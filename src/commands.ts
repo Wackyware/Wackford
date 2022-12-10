@@ -7,7 +7,7 @@ import {
     CreateApplicationCommand,
     DiscordInteractionDataOption,
     Interaction,
-    MakeRequired
+    MakeRequired,
 } from "../discordeno.ts";
 import BotEmitter from "./bot.ts";
 
@@ -66,5 +66,4 @@ export function initCommands() {
             command.execute(bot, interaction, args);
         }
     });
-
 }
