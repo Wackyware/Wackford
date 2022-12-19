@@ -5,8 +5,8 @@ import {
     InteractionResponseTypes,
     Message,
     sendMessage,
+    Bot
 } from "../discordeno.ts";
-import { Bot } from "https://deno.land/x/discordeno@17.0.0/bot.ts";
 
 export async function getBotUser(bot: Bot) {
     return await bot.helpers.getUser(bot.id);

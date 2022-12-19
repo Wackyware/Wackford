@@ -63,7 +63,11 @@ export function initCommands() {
                 }
             }
 
-            command.execute(bot, interaction, args);
+            try {
+                command.execute(bot, interaction, args);
+            } catch (e) {
+                console.error(e)
+            }
         }
     });
 }

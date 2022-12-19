@@ -12,6 +12,7 @@ const BotEmitter = new EventEmitter<{
     ready(bot: Bot): void;
     message: typeof bot.events.messageCreate;
     interactionCreate: typeof bot.events.interactionCreate;
+    reactionAdd: typeof bot.events.reactionAdd
 }>();
 
 // listen for startup event
@@ -35,6 +36,10 @@ BotEmitter.on("start", async (opts: CreateBotOptions, plugins?: Plugin[]) => {
     bot.events.interactionCreate = (bot, interaction) => {
         BotEmitter.emitSync("interactionCreate", bot, interaction);
     };
+
+    bot.events.reactionAdd = (bot, payload) => {
+        BotEmitter.emitSync("reactionAdd", bot, payload)
+    }
 
     await startBot(bot);
 });
