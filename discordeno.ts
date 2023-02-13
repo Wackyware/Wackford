@@ -1,2 +1,2 @@
 // re-exports discordeno so no version mismatch happens
-export * from "https://deno.land/x/discordeno@17.0.0/mod.ts";
+export * from "https://deno.land/x/discordeno@18.0.1/mod.ts";
